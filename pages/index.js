@@ -1,65 +1,67 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-
 export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+	return (
+		<div className="wrapper">
+			<section className="head"></section>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+			<section className="about">
+				<h1>Who We Are</h1>
+				<div className="carousel" aria-label="Gallery">
+					<ol className="carousel__viewport">
+						<li id="carousel__slide1" className="carousel__slide">
+							<div className="carousel__snapper"></div>
+							<h4>Christopher</h4>
+							<p>Guitar/Vocals</p>
+						</li>
+						<li id="carousel__slide2" className="carousel__slide">
+							<div className="carousel__snapper"></div>
+							<h4>Stephen</h4>
+							<p>Drums/Vocals</p>
+						</li>
+						<li id="carousel__slide3" className="carousel__slide">
+							<div className="carousel__snapper"></div>
+							<h4>Ben</h4>
+							<p>Guitar</p>
+						</li>
+						<li id="carousel__slide4" className="carousel__slide">
+							<div className="carousel__snapper"></div>
+							<h4>Bart</h4>
+							<p>Bass</p>
+						</li>
+					</ol>
+				</div>
+			</section>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+			<section className="shows">
+				<div>
+					<ul>
+						<li>Here</li>
+						<li>There</li>
+						<li>Anywhere</li>
+						<li>Ah fuck,</li>
+						<li>Dr. Suess got cancelled.</li>
+						<li>I'm out of the band.</li>
+					</ul>
+				</div>
+				<h1>Where To See Us</h1>
+			</section>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+			<section className="music">
+				<h1>Take a Listen</h1>
+				{/* eslint-disable-next-line */}
+				<iframe
+					src="https://open.spotify.com/embed/artist/0v26XwuwtnWuVkTVjbBsvv"
+					width="300"
+					height="200"
+					frameBorder="0"
+					allowtransparency="true"
+					allow="encrypted-media"
+				></iframe>
+			</section>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+			<section className="merch">
+				<div>Buy our shit because no one makes money off of streaming lol</div>
+				<h1>Merch</h1>
+			</section>
+		</div>
+	);
 }
