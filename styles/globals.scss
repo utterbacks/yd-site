@@ -47,12 +47,16 @@ section {
 }
 /* ========= Header Specifics============ */
 .head {
-	background: top / cover fixed url(../public/images/Option_Three.jpg);
+	background: top / cover fixed 
+	// url(../public/images/Option_Three.jpg)
+	;
 }
 // Media Queries
 @media only screen and (max-width: 650px) {
 	.head {
-		background: top / cover fixed url(../public/images/I_love_this_one.jpg);
+		background: top / cover fixed 
+		// url(../public/images/I_love_this_one.jpg)
+		;
 	}
 }
 

@@ -1,7 +1,20 @@
-export default function Home() {
+import axios from 'axios'; 
+import apiUrl from "../utils/apiUrl";
+
+import HeadCarousel from '../components/HeadCarousel'
+
+export default function Home(  props ) {
+
+	console.log( props)
+	// console.log( index.headerImage )
+
+
 	return (
 		<div className="wrapper">
-			<section className="head"></section>
+			
+
+			{/* <section className="head"></section> */}
+			<HeadCarousel  windowSize={props.windowSize} images={props.index.headerImage}/>
 
 			<section className="about">
 				<h1>Who We Are</h1>
@@ -65,3 +78,14 @@ export default function Home() {
 		</div>
 	);
 }
+
+
+Home.getInitialProps = async ctx => {
+  try {
+    const res = await axios.get(apiUrl('yd-backend'));
+    const index = res.data;
+    return { index };
+  } catch (error) {
+    return { error };
+  }
+};
