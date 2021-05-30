@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
 
-
 	function useWindowSize() {
 		const [windowSize, setWindowSize] = useState({
 			width: 1000
