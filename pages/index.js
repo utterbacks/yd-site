@@ -3,6 +3,7 @@ import apiUrl from "../utils/apiUrl";
 
 import HeadCarousel from '../components/HeadCarousel'
 import About from '../components/About'
+import Shows from '../components/Shows'
 
 export default function Home( props ) {
 
@@ -11,11 +12,14 @@ export default function Home( props ) {
 	return (
 		<div className="wrapper">
 			
-			<HeadCarousel  windowSize={props.windowSize} images={props.index.headerImage}/>
+			<HeadCarousel windowSize={props.windowSize} images={props.index.headerImage}/>
 
-			<About />
+			<About members={props.index.Members} />
+
+			<Shows heading={props.index.showsHeading} shows={props.index.SingleShows}/>
 
 
+{/* 
 			<section className="shows">
 				<div>
 					<ul>
@@ -28,7 +32,7 @@ export default function Home( props ) {
 					</ul>
 				</div>
 				<h1>Where To See Us</h1>
-			</section>
+			</section> */}
 
 			<section className="music">
 				<h1>Take a Listen</h1>

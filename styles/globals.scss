@@ -8,6 +8,36 @@ $sliderFontSize: 80%;
 $h1: 3.052rem;
 $h4: 1.5rem;
 
+* {
+	box-sizing: border-box;
+	scrollbar-color: transparent transparent; /* thumb and track color */
+	scrollbar-width: 0px;
+}
+
+*::-webkit-scrollbar {
+	width: 0;
+}
+
+*::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+	background: transparent;
+	border: none;
+}
+
+* {
+	-ms-overflow-style: none;
+}
+
+ol,
+li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
 body {
 	margin: 0 auto;
 	// padding: 0 1.25rem;
@@ -36,6 +66,7 @@ h1 {
 iframe {
 	border-radius: 4px;
 }
+
 section {
 	scroll-snap-align: center;
 	height: 100vh;
@@ -47,16 +78,12 @@ section {
 }
 /* ========= Header Specifics============ */
 .head {
-	background: top / cover fixed 
-	// url(../public/images/Option_Three.jpg)
-	;
+	background: top / cover fixed;
 }
 // Media Queries
 @media only screen and (max-width: 650px) {
 	.head {
-		background: top / cover fixed 
-		// url(../public/images/I_love_this_one.jpg)
-		;
+		background: top / cover fixed;
 	}
 }
 
@@ -123,36 +150,6 @@ section {
 	}
 }
 
-* {
-	box-sizing: border-box;
-	scrollbar-color: transparent transparent; /* thumb and track color */
-	scrollbar-width: 0px;
-}
-
-*::-webkit-scrollbar {
-	width: 0;
-}
-
-*::-webkit-scrollbar-track {
-	background: transparent;
-}
-
-*::-webkit-scrollbar-thumb {
-	background: transparent;
-	border: none;
-}
-
-* {
-	-ms-overflow-style: none;
-}
-
-ol,
-li {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
 .carousel__viewport {
 	display: flex;
 	overflow-x: scroll;
@@ -170,6 +167,7 @@ li {
 	padding: 2em 3em 0 3em;
 	margin: 1em;
 	text-shadow: $textShadow;
+	background: top / cover no-repeat
 	h4 {
 		font-size: $h4;
 		margin: 0;
@@ -178,19 +176,6 @@ li {
 		font-size: $sliderFontSize;
 		margin: 0;
 	}
-}
-
-.carousel__slide:nth-child(1) {
-	background: top / cover no-repeat url(../public/images/Chris2.jpg);
-}
-.carousel__slide:nth-child(2) {
-	background: top / cover no-repeat url(../public/images/Stephen.jpg);
-}
-.carousel__slide:nth-child(3) {
-	background: top / cover no-repeat url(../public/images/Ben2.jpg);
-}
-.carousel__slide:nth-child(4) {
-	background: top / cover no-repeat url(../public/images/Bart3.jpg);
 }
 
 .carousel__slide:before {
