@@ -1,21 +1,20 @@
-import MemberCard from './cards/MemberCard'
+import MemberCard from "./cards/MemberCard";
+// ==============================\/ destrucure member from props to shorten props calls
+export default function About({ members }) {
+	// console.log(members);
+	return (
+		<section className="about">
+			<h1>Who We Are</h1>
 
+			{/* .brady-bunch is the container for the frames */}
 
-export default function About(props) {
+			<div className="brady-bunch" aria-label="Gallery">
+				{/* {members.map((member, index) => {
+				return <MemberCard member={member} key={index} />;
+			})} */}
 
-  console.log(props.members)
-  return (
-    <section className="about">
-      <h1>Who We Are</h1>
-      <div className="carousel" aria-label="Gallery">
-        <ol className="carousel__viewport">
-
-          {props.members.map((member, index) => {
-            return (<MemberCard member={member} key={index} />)
-          })}
-
-        </ol>
-      </div>
-    </section>
-  )
+				<MemberCard />
+			</div>
+		</section>
+	);
 }
