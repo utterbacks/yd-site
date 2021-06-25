@@ -1,30 +1,23 @@
 // ==================================\/ destrucure member from props to shorten props calls
 export default function MemberCard({ member }) {
 	return (
-		<>
-			{/* .brady-bunch-frame and everything within is one member card ===================== */}
-
-			<div className="brady-bunch-frame">
-				{/* src=`${member.Pic.formats.medium.url}` */}
-
-				<img src="/images/Chris2.jpg" className="image" />
-				<div className="info-window">
-					<div className="actual-info">
-						<h4>
-							Christopher
-							{/* {member.Name} */}
-						</h4>
-						<p>
-							Guitar/Vocals
-							{/* {member.Instrument} */}
-						</p>
-					</div>
+		<div className="brady-bunch-frame">
+			<img src={member.Pic.formats.medium.url} className="image" />
+			<div className="info-window">
+				<div className="actual-info">
+					<h4>{member.Name}</h4>
+					<p>{member.Instrument}</p>
 				</div>
 			</div>
+		</div>
+	);
+}
+{
+	/* =============================================================================== */
+}
 
-			{/* =============================================================================== */}
-
-			<div className="brady-bunch-frame">
+{
+	/* <div className="brady-bunch-frame">
 				<img src="/images/Stephen.jpg" className="image" />
 				<div className="info-window">
 					<div className="actual-info">
@@ -51,11 +44,12 @@ export default function MemberCard({ member }) {
 					</div>
 				</div>
 			</div>
-		</>
-
+		</> */
+}
+{
+	/* 
 		// <li style={{ background: `url(${props.member.Pic.formats.medium.url})` }}>
 		// 	<h4>{props.member.Name}</h4>
 		// 	<p>{props.member.Instrument}</p>
-		// </li>
-	);
+		// </li> */
 }
