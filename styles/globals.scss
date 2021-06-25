@@ -63,10 +63,6 @@ h1 {
 	scroll-snap-type: y mandatory;
 }
 
-iframe {
-	border-radius: 4px;
-}
-
 section {
 	scroll-snap-align: center;
 	height: 100vh;
@@ -74,6 +70,11 @@ section {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
 }
 /* ========= Header Specifics============ */
 .head {
@@ -119,6 +120,25 @@ section {
 .brady-bunch-frame:hover .info-window {
 	opacity: 1;
 }
+// end brady grid
+// ===========================================================
+// listen links
+.listen-links {
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+.listen-link {
+	padding: 2rem;
+}
+.fab {
+	display: flex;
+	justify-content: center;
+}
+i {
+	height: auto;
+	width: 10rem;
+}
+
 // Media Queries
 @media only screen and (max-width: 650px) {
 	.head {
@@ -129,6 +149,10 @@ section {
 	section {
 		flex-direction: column;
 		scroll-snap-align: none;
+	}
+	i {
+		width: 5rem;
+		margin: 0.5rem;
 	}
 	.wrapper {
 		scroll-snap-type: none;
