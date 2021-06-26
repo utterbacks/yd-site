@@ -145,7 +145,7 @@ i {
 		background: top / cover fixed;
 	}
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 768px) {
 	section {
 		flex-direction: column;
 		scroll-snap-align: none;
@@ -157,10 +157,16 @@ i {
 	.wrapper {
 		scroll-snap-type: none;
 	}
+	.info-window {
+		padding-bottom: 1.5rem;
+	}
 	.brady-bunch {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+	}
+	.brady-bunch-frame {
+		height: 8.5rem;
 	}
 	.image {
 		padding-top: 0.1rem;

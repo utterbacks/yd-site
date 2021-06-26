@@ -9,8 +9,6 @@ import Shows from "../components/Shows";
 import Listen from "../components/Listen";
 
 export default function Home(props) {
-	// console.log(props);
-
 	return (
 		<div className="wrapper">
 			<Head>
@@ -20,8 +18,8 @@ export default function Home(props) {
 					rel="stylesheet"
 					href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
 					integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-					crossorigin="anonymous"
-					referrerpolicy="no-referrer"
+					crossOrigin="anonymous"
+					referrerPolicy="no-referrer"
 				/>
 			</Head>
 			<HeadCarousel
@@ -29,13 +27,11 @@ export default function Home(props) {
 			images={props.index.headerImage}
 			/>
 
-			<About
-			// members={props.index.Members}
-			/>
+			<About members={props.index.Members} />
 
 			<Shows
-			// heading={props.index.showsHeading}
-			// shows={props.index.SingleShows}
+				heading={props.index.showsHeading}
+				shows={props.index.SingleShows}
 			/>
 
 			{/* 

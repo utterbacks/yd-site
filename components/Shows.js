@@ -4,9 +4,14 @@ export default function Shows(props) {
 	return (
 		<section className="shows">
 			<ul className="shows-container">
-				{/* {props.shows.map(show => {
-          return <li >{show.dateOfEvent} - {show .nameOfEvent}</li>
-        })} */}
+				{props.shows.map((show) => {
+					return (
+						<li>
+							{" "}
+							{show.dateOfEvent} - {show.nameOfEvent}
+						</li>
+					);
+				})}
 			</ul>
 			<h1>{props.heading}</h1>
 		</section>

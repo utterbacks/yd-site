@@ -9,11 +9,11 @@ export default function About({ members }) {
 			{/* .brady-bunch is the container for the frames */}
 
 			<div className="brady-bunch" aria-label="Gallery">
-				{/* {members.map((member, index) => {
-				return <MemberCard member={member} key={index} />;
-			})} */}
+				{members.map((member, index) => {
+					return <MemberCard member={member} key={index} />;
+				})}
 
-				<MemberCard />
+				{/* <MemberCard /> */}
 			</div>
 		</section>
 	);

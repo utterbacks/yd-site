@@ -10,7 +10,7 @@ export default function Listen() {
 						className="listen-link"
 						target="_blank"
 					>
-						<i class="fab fa-spotify fa-3x"></i>
+						<i className="fab fa-spotify fa-3x"></i>
 					</a>
 				</div>
 				<div>
@@ -19,7 +19,7 @@ export default function Listen() {
 						className="listen-link"
 						target="_blank"
 					>
-						<i class="fab fa-apple fa-3x"></i>
+						<i className="fab fa-apple fa-3x"></i>
 					</a>
 				</div>
 				<div>
@@ -28,7 +28,7 @@ export default function Listen() {
 						className="listen-link"
 						target="_blank"
 					>
-						<i class="fab fa-youtube fa-3x"></i>
+						<i className="fab fa-youtube fa-3x"></i>
 					</a>
 				</div>
 				<div>
@@ -37,7 +37,7 @@ export default function Listen() {
 						className="listen-link"
 						target="_blank"
 					>
-						<i class="fab fa-amazon fa-3x"></i>
+						<i className="fab fa-amazon fa-3x"></i>
 					</a>
 				</div>
 			</div>
