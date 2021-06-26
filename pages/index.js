@@ -1,28 +1,48 @@
-import axios from 'axios'; 
+import Head from "next/head";
+
+import axios from "axios";
 import apiUrl from "../utils/apiUrl";
 
-import HeadCarousel from '../components/HeadCarousel'
-import About from '../components/About'
-import Shows from '../components/Shows'
+import HeadCarousel from "../components/HeadCarousel";
+import About from "../components/About";
+import Shows from "../components/Shows";
+import Listen from "../components/Listen";
 
-export default function Home( props ) {
-
-	console.log(props)
+export default function Home(props) {
+	// console.log(props);
 
 	return (
 		<div className="wrapper">
-			
-			<HeadCarousel windowSize={props.windowSize} images={props.index.headerImage}/>
+			<Head>
+				{/* This adds links to the head tag of the html. Specifically, this is the font-awesome CDN for social links. */}
 
-			<About members={props.index.Members} />
+				<link
+					rel="stylesheet"
+					href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+					integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+					crossorigin="anonymous"
+					referrerpolicy="no-referrer"
+				/>
+			</Head>
+			<HeadCarousel
+			// windowSize={props.windowSize}
+			// images={props.index.headerImage}
+			/>
 
-			<Shows heading={props.index.showsHeading} shows={props.index.SingleShows}/>
+			<About
+			// members={props.index.Members}
+			/>
 
+			<Shows
+			// heading={props.index.showsHeading}
+			// shows={props.index.SingleShows}
+			/>
 
-{/* 
+			{/* 
 			<section className="shows">
+			<h1>Where To See Us</h1>
 				<div>
-					<ul>
+					<li>
 						<li>Here</li>
 						<li>There</li>
 						<li>Anywhere</li>
@@ -31,37 +51,24 @@ export default function Home( props ) {
 						<li>I'm out of the band.</li>
 					</ul>
 				</div>
-				<h1>Where To See Us</h1>
 			</section> */}
 
-			<section className="music">
-				<h1>Take a Listen</h1>
-				{/* eslint-disable-next-line */}
-				<iframe
-					src="https://open.spotify.com/embed/artist/0v26XwuwtnWuVkTVjbBsvv"
-					width="300"
-					height="200"
-					frameBorder="0"
-					allowtransparency="true"
-					allow="encrypted-media"
-				></iframe>
-			</section>
+			<Listen />
 
 			<section className="merch">
-				<div>Buy our shit because no one makes money off of streaming lol</div>
 				<h1>Merch</h1>
+				<div>Merch is coming soon, so stay tuned!</div>
 			</section>
 		</div>
 	);
 }
 
-
-Home.getInitialProps = async ctx => {
-  try {
-    const res = await axios.get(apiUrl('yd-backend'));
-    const index = res.data;
-    return { index };
-  } catch (error) {
-    return { error };
-  }
-};
+// Home.getInitialProps = async (ctx) => {
+// 	try {
+// 		const res = await axios.get(apiUrl("yd-backend"));
+// 		const index = res.data;
+// 		return { index };
+// 	} catch (error) {
+// 		return { error };
+// 	}
+// };
