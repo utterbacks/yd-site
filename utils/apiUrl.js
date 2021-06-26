@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3000;
 module.exports = (path) => {
 
   if (INFRA_ENV === 'production') {
-    return 'https://yd-backend.herokuapp.com/' + path;
+    return 'https://peaceful-spire-58679.herokuapp.com/' + path;
   } else {
     return `http://localhost:1337/` + path;
   }
