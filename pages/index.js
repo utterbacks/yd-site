@@ -25,8 +25,8 @@ export default function Home(props) {
 				/>
 			</Head>
 			<HeadCarousel
-			// windowSize={props.windowSize}
-			// images={props.index.headerImage}
+			windowSize={props.windowSize}
+			images={props.index.headerImage}
 			/>
 
 			<About
@@ -63,12 +63,12 @@ export default function Home(props) {
 	);
 }
 
-// Home.getInitialProps = async (ctx) => {
-// 	try {
-// 		const res = await axios.get(apiUrl("yd-backend"));
-// 		const index = res.data;
-// 		return { index };
-// 	} catch (error) {
-// 		return { error };
-// 	}
-// };
+Home.getInitialProps = async (ctx) => {
+	try {
+		const res = await axios.get(apiUrl("yd-backend"));
+		const index = res.data;
+		return { index };
+	} catch (error) {
+		return { error };
+	}
+};
