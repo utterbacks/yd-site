@@ -1,4 +1,4 @@
- @import url("https://fonts.googleapis.com/css?family=Kumbh+Sans:400");
+@import url("https://fonts.googleapis.com/css?family=Kumbh+Sans:400");
 
 $black: #101c2c;
 $green: #002329;
@@ -83,6 +83,10 @@ a {
 .head {
 	background: top / cover fixed;
 }
+// ==== keep merch section off of the very bottom of the page=====
+.merch {
+	margin-bottom: 5rem;
+}
 
 // grid of our ugly mugs ====================================
 .brady-bunch {
@@ -148,6 +152,10 @@ i {
 		scroll-snap-align: none;
 		padding-top: 30rem;
 		padding-bottom: 0rem;
+		&.shows,
+		&.merch {
+			flex-direction: column-reverse;
+		}
 	}
 	i {
 		width: 5rem;
@@ -164,9 +172,5 @@ i {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-	}
-
-	.merch {
-		margin-bottom: 5rem;
 	}
 }

@@ -56,8 +56,8 @@ export default function Home(props) {
 			<Listen />
 
 			<section className="merch">
-				<h1>Merch</h1>
 				<div>Merch is coming soon, so stay tuned!</div>
+				<h1>Merch</h1>
 			</section>
 		</div>
 	);
