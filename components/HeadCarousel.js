@@ -10,6 +10,8 @@ export default function HeadCarousel(props) {
 			className="head"
 			style={{
 				backgroundImage: isMobile ? `url(${mobileIMG})` : `url(${desktopIMG})`,
+				// backgroundPosition: "top",
+				backgroundSize: "cover",
 			}}
 		></section>
 	);

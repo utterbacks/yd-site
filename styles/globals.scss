@@ -79,10 +79,6 @@ a {
 	color: #fff;
 }
 
-/* ========= Header Specifics============ */
-.head {
-	background: top / cover fixed;
-}
 // ==== keep merch section off of the very bottom of the page=====
 .merch {
 	margin-bottom: 5rem;
@@ -141,11 +137,6 @@ i {
 }
 
 // Media Queries
-@media only screen and (max-width: 650px) {
-	.head {
-		background: top / cover fixed;
-	}
-}
 @media only screen and (max-width: 768px) {
 	section {
 		flex-direction: column;
