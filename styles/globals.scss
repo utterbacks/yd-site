@@ -70,12 +70,15 @@ section {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	padding-top: 15rem;
+	padding-bottom: 15rem;
 }
 
 a {
 	text-decoration: none;
 	color: #fff;
 }
+
 /* ========= Header Specifics============ */
 .head {
 	background: top / cover fixed;
@@ -85,32 +88,23 @@ a {
 .brady-bunch {
 	display: grid;
 	grid-template-columns: 50% 50%;
+	gap: 2rem;
 }
 .brady-bunch-frame {
-	height: 17rem;
-	width: auto;
+	height: 12rem;
+	width: 17rem;
 	position: relative;
 	align-content: center;
-}
-.image {
-	opacity: 1;
-	display: block;
-	width: auto;
-	height: 100%;
-	padding: 2rem;
-	transition: 0.5s ease;
-	backface-visibility: hidden;
 }
 
 .info-window {
 	opacity: 0;
 	transition: 0.5s ease;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	text-align: center;
+	height: 12rem;
 }
 
 //
@@ -119,6 +113,9 @@ a {
 }
 .brady-bunch-frame:hover .info-window {
 	opacity: 1;
+}
+.info-window:hover {
+	background: rgba(0, 0, 0, 0.5);
 }
 // end brady grid
 // ===========================================================
@@ -149,6 +146,8 @@ i {
 	section {
 		flex-direction: column;
 		scroll-snap-align: none;
+		padding-top: 30rem;
+		padding-bottom: 0rem;
 	}
 	i {
 		width: 5rem;
@@ -157,6 +156,7 @@ i {
 	.wrapper {
 		scroll-snap-type: none;
 	}
+
 	.info-window {
 		padding-bottom: 1.5rem;
 	}
@@ -165,10 +165,8 @@ i {
 		flex-direction: column;
 		justify-content: center;
 	}
-	.brady-bunch-frame {
-		height: 8.5rem;
-	}
-	.image {
-		padding-top: 0.1rem;
+
+	.merch {
+		margin-bottom: 5rem;
 	}
 }

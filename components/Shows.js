@@ -6,7 +6,7 @@ export default function Shows(props) {
 			<ul className="shows-container">
 				{props.shows.map((show) => {
 					return (
-						<li>
+						<li key={show.index}>
 							{" "}
 							{show.dateOfEvent} - {show.nameOfEvent}
 						</li>
