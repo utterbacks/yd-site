@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 
 import axios from "axios";
 import apiUrl from "../utils/apiUrl";
@@ -12,7 +13,7 @@ export default function Home(props) {
 	return (
 		<div className="wrapper">
 			<Head>
-				{/* This adds links to the head tag of the html. Specifically, this is the font-awesome CDN for social links. */}
+				<title>Young Detectives</title>
 
 				<link
 					rel="stylesheet"
@@ -22,9 +23,12 @@ export default function Home(props) {
 					referrerPolicy="no-referrer"
 				/>
 			</Head>
+			<Head>
+				<link rel="icon" type="image/png" href="/favicon.png" />
+			</Head>
 			<HeadCarousel
-			windowSize={props.windowSize}
-			images={props.index.headerImage}
+				windowSize={props.windowSize}
+				images={props.index.headerImage}
 			/>
 
 			<About members={props.index.Members} />
