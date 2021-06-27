@@ -23,8 +23,8 @@ export default function Home(props) {
 				/>
 			</Head>
 			<HeadCarousel
-				windowSize={props.windowSize}
-				images={props.index.headerImage}
+			windowSize={props.windowSize}
+			images={props.index.headerImage}
 			/>
 
 			<About members={props.index.Members} />

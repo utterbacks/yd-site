@@ -6,9 +6,11 @@ export default function HeadCarousel(props) {
 	return (
 		<section
 			className="head"
-			style={{
-				backgroundImage: isMobile ? `url(${mobileIMG})` : `url(${desktopIMG})`,
-			}}
+			style={
+				{
+					backgroundImage: isMobile ? `url(${mobileIMG})` : `url(${desktopIMG})`,
+				}
+			}
 		></section>
 	);
 }
