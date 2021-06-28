@@ -1,8 +1,14 @@
 // ==================================\/ destrucure member from props to shorten props calls
 export default function MemberCard({ member }) {
 	return (
-		<div className="brady-bunch-frame">
-			<img src={member.Pic.formats.medium.url} className="image" />
+		<div
+			className="brady-bunch-frame"
+			style={{
+				backgroundImage: `url(${member.Pic.formats.medium.url})`,
+				backgroundSize: "cover",
+				backgroundRepeat: "no-repeat",
+			}}
+		>
 			<div className="info-window">
 				<div className="actual-info">
 					<h4>{member.Name}</h4>
