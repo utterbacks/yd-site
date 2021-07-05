@@ -1,12 +1,16 @@
 import ShowCard from "./cards/ShowCard";
+import React, { useState } from 'react'
 
 export default function Shows(props) {
+
+	const [showDisplay, setShowDisplay] = useState(false)
+
 	return (
 		<section className="shows">
 			<ul className="shows-container">
 				{props.shows.map((show) => {
 					return (
-						<li key={show.index}>
+						<li key={show.id}>
 							{" "}
 							{show.dateOfEvent} - {show.nameOfEvent}
 						</li>
