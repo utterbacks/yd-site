@@ -5,12 +5,18 @@ export default function Shows(props) {
 
 	const [showDisplay, setShowDisplay] = useState(false)
 
+	const displayShowCard = () =>  {
+		showDisplay ? setShowDisplay(false) : setShowDisplay(true)
+		// setShowDisplay(true);
+		console.log(showDisplay)
+	}
+
 	return (
 		<section className="shows">
 			<ul className="shows-container">
 				{props.shows.map((show) => {
 					return (
-						<li key={show.id}>
+						<li key={show.id} onClick={() => displayShowCard()}>
 							{" "}
 							{show.dateOfEvent} - {show.nameOfEvent}
 						</li>
