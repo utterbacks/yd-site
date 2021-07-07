@@ -12,20 +12,6 @@ import Listen from "../components/Listen";
 export default function Home(props) {
 	return (
 		<div className="wrapper">
-			<Head>
-				<title>Young Detectives</title>
-
-				<link
-					rel="stylesheet"
-					href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-					integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-					crossOrigin="anonymous"
-					referrerPolicy="no-referrer"
-				/>
-			</Head>
-			<Head>
-				<link rel="icon" type="image/png" href="/favicon.png" />
-			</Head>
 			<HeadCarousel
 				windowSize={props.windowSize}
 				images={props.index.headerImage}

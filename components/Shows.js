@@ -1,25 +1,27 @@
-import ShowCard from "./cards/ShowCard";
-import React, { useState } from 'react'
+import Modal from "./Modal";
+import React, { useState } from "react";
 
 export default function Shows(props) {
+	const [showDisplay, setShowDisplay] = useState(false);
 
-	const [showDisplay, setShowDisplay] = useState(false)
-
-	const displayShowCard = () =>  {
-		showDisplay ? setShowDisplay(false) : setShowDisplay(true)
-		// setShowDisplay(true);
-		console.log(showDisplay)
-	}
+	const displayShowCard = (show) => {
+		showDisplay ? setShowDisplay(false) : setShowDisplay(true);
+	};
 
 	return (
 		<section className="shows">
 			<ul className="shows-container">
 				{props.shows.map((show) => {
 					return (
-						<li key={show.id} onClick={() => displayShowCard()}>
-							{" "}
-							{show.dateOfEvent} - {show.nameOfEvent}
-						</li>
+						<>
+							<li key={show.id} onClick={() => displayShowCard(show)}>
+								{" "}
+								{show.dateOfEvent} - {show.nameOfEvent}
+							</li>
+							<Modal open={showDisplay} onClose={() => setShowDisplay(false)}>
+								{show.dateOfEvent}
+							</Modal>
+						</>
 					);
 				})}
 			</ul>

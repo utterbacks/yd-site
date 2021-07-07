@@ -1,0 +1,6 @@
+now:
+- footer with socials
+
+future:
+- make the listen section prettier
+- videos
