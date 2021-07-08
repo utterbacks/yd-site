@@ -17,6 +17,20 @@ export default function Home(props) {
 				windowSize={props.windowSize}
 				images={props.index.headerImage}
 			/>
+			<section className="featured-stream">
+				<iframe
+					src="https://open.spotify.com/embed/album/048ED4rBbGX8Q9rD5b07gb"
+					width="100%"
+					height="380"
+					frameBorder="0"
+					allowtransparency="true"
+					allow="encrypted-media"
+				></iframe>
+				<div>
+					<h1>Come & Say Goodnight</h1>
+					<h3>Now Streaming on all platforms!</h3>
+				</div>
+			</section>
 			<About members={props.index.Members} />
 			<Shows
 				heading={props.index.showsHeading}
