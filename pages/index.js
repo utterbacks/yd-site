@@ -8,7 +8,8 @@ import HeadCarousel from "../components/HeadCarousel";
 import About from "../components/About";
 import Shows from "../components/Shows";
 import Listen from "../components/Listen";
-
+import Merch from "../components/Merch";
+import Footer from "../components/Footer";
 export default function Home(props) {
 	return (
 		<div className="wrapper">
@@ -16,35 +17,14 @@ export default function Home(props) {
 				windowSize={props.windowSize}
 				images={props.index.headerImage}
 			/>
-
 			<About members={props.index.Members} />
-
 			<Shows
 				heading={props.index.showsHeading}
 				shows={props.index.SingleShows}
 			/>
-
-			{/* 
-			<section className="shows">
-			<h1>Where To See Us</h1>
-				<div>
-					<li>
-						<li>Here</li>
-						<li>There</li>
-						<li>Anywhere</li>
-						<li>Ah fuck,</li>
-						<li>Dr. Suess got cancelled.</li>
-						<li>I'm out of the band.</li>
-					</ul>
-				</div>
-			</section> */}
-
 			<Listen />
-
-			<section className="merch">
-				<div>Merch is coming soon, so stay tuned!</div>
-				<h1>Merch</h1>
-			</section>
+			<Merch />
+			<Footer />
 		</div>
 	);
 }
