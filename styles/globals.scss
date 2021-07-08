@@ -50,6 +50,7 @@ body {
 	background: $green;
 	color: #fff;
 	font-size: 112.8%;
+	text-align: center;
 }
 
 h1 {
@@ -78,12 +79,13 @@ section {
 a {
 	text-decoration: none;
 	color: #fff;
+	border-bottom: 0.5px solid white;
 }
 
-// ==== keep merch section off of the very bottom of the page=====
-// .merch {
-// 	margin-bottom: 5rem;
-// }
+iframe {
+	width: 20rem;
+	height: 10rem;
+}
 
 // grid of our ugly mugs ====================================
 .brady-bunch {
@@ -137,6 +139,11 @@ i {
 	width: 10rem;
 }
 
+.fa-times {
+	width: fit-content;
+	display: flex;
+}
+
 // Shows Modal ==============================================
 
 .backdrop {
@@ -179,10 +186,14 @@ i {
 		padding-top: 30rem;
 		padding-bottom: 0rem;
 		&.shows,
-		&.merch {
+		&.merch,
+		&.featured-stream {
 			flex-direction: column-reverse;
 			margin-bottom: 2rem;
 		}
+	}
+	.featured-stream {
+		padding-top: 2rem;
 	}
 	i {
 		width: 5rem;

@@ -7,8 +7,10 @@ export default function Modal({ open, children, onClose }) {
 				<ShowCard selector="#modal">
 					<div className="backdrop">
 						<div className="modal">
-							<i className="fas fa-times" onClick={onClose} />
-							{children}
+							<a href="#" onClick={onClose}>
+								<i className="fas fa-times" />
+							</a>
+							<div>{children}</div>
 						</div>
 					</div>
 				</ShowCard>
