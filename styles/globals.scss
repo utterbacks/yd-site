@@ -2,6 +2,7 @@
 
 $black: #101c2c;
 $green: #002329;
+$lightGreen: #014652;
 $textShadow: 1px 1px 2px $black;
 $font: "Kumbh Sans", sans-serif;
 $fontSize: 100%;
@@ -80,9 +81,9 @@ a {
 }
 
 // ==== keep merch section off of the very bottom of the page=====
-.merch {
-	margin-bottom: 5rem;
-}
+// .merch {
+// 	margin-bottom: 5rem;
+// }
 
 // grid of our ugly mugs ====================================
 .brady-bunch {
@@ -136,6 +137,8 @@ i {
 	width: 10rem;
 }
 
+// Shows Modal ==============================================
+
 .backdrop {
 	position: fixed;
 	background-color: rgba(0, 0, 0, 0.5);
@@ -156,6 +159,18 @@ i {
 	border-radius: 10px;
 }
 
+.footer {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 5rem;
+	a {
+		color: $lightGreen;
+	}
+}
+.merch {
+	margin-bottom: -5rem;
+}
+
 // Media Queries
 @media only screen and (max-width: 768px) {
 	section {
@@ -166,6 +181,7 @@ i {
 		&.shows,
 		&.merch {
 			flex-direction: column-reverse;
+			margin-bottom: 2rem;
 		}
 	}
 	i {
