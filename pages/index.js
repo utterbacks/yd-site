@@ -19,7 +19,7 @@ export default function Home(props) {
 			/>
 			<section className="featured-stream">
 				<iframe
-					src="https://open.spotify.com/embed/album/048ED4rBbGX8Q9rD5b07gb"
+					src="https://open.spotify.com/embed/album/5HekPZLENJHAbO3sDF1VsX"
 					width="100%"
 					height="380"
 					frameBorder="0"
