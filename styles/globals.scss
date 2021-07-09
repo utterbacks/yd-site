@@ -126,9 +126,7 @@ iframe {
 .listen-links {
 	display: grid;
 	grid-template-columns: 50% 50%;
-	a {
-		border-bottom: 0.5px solid white;
-	}
+
 }
 .listen-link {
 	padding: 2rem;
@@ -167,6 +165,14 @@ i {
 	left: 10%;
 	padding: 1em;
 	border-radius: 10px;
+}
+
+.shows-container {
+	a {
+
+		border-bottom: 0.5px solid white;
+	
+	}
 }
 
 .footer {
