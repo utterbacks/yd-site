@@ -25,9 +25,7 @@ export default function Shows(props) {
 							<a href="#" onClick={() => displayShowCard(show)}>
 								See Details
 							</a>
-							<Modal open={showDisplay} onClose={() => setShowDisplay(false)}>
-								Check back soon for more details!
-							</Modal>
+							<Modal open={showDisplay} props={show} onClose={() => setShowDisplay(false)}></Modal>
 						</>
 					);
 				})}

@@ -165,6 +165,7 @@ i {
 	left: 10%;
 	padding: 1em;
 	border-radius: 10px;
+
 }
 
 .shows-container {
@@ -172,6 +173,12 @@ i {
 
 		border-bottom: 0.5px solid white;
 	
+	}
+
+	.content-div {
+		img {
+			max-width: 100%;
+		}
 	}
 }
 
