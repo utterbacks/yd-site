@@ -1,1 +1,1 @@
-This is the website for our band, Young Detectives! If you're checking this out on github, I highly encourage you to go check the website out at https://young-detectives-main.netlify.app/ and give us a listen/like on whatever streaming/social service you prefer!
+This is the website for our band, Young Detectives! If you're checking this out on github, I highly encourage you to go check the website out at https://youngdetectives.com and give us a listen/like on whatever streaming/social service you prefer!
